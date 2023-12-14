@@ -15,8 +15,8 @@
 		36823BF42B296C4000A26180 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36823BF22B296C4000A26180 /* MyWebView.swift */; };
 		36823BF92B296CCE00A26180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36823BF82B296CCE00A26180 /* Assets.xcassets */; };
 		36823BFB2B296CE100A26180 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36823BFA2B296CE100A26180 /* Launch Screen.storyboard */; };
-		36823C022B296F8000A26180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36823C002B296F7F00A26180 /* Main.storyboard */; };
 		36823C042B29700700A26180 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 36823C032B29700700A26180 /* Preview Content */; };
+		36823C442B2993CA00A26180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36823C432B2993CA00A26180 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +37,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36823BC52B29696500A26180 /* usimsa-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "usimsa-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36823BC52B29696500A26180 /* usimsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usimsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36823BC82B29696500A26180 /* usimsa_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usimsa_iosApp.swift; sourceTree = "<group>"; };
 		36823BCA2B29696500A26180 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		36823BD52B29696600A26180 /* usimsa-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "usimsa-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36823BD52B29696600A26180 /* usimsaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usimsaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36823BD92B29696600A26180 /* usimsa_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usimsa_iosTests.swift; sourceTree = "<group>"; };
-		36823BDF2B29696600A26180 /* usimsa-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "usimsa-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36823BDF2B29696600A26180 /* usimsaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usimsaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36823BE32B29696600A26180 /* usimsa_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usimsa_iosUITests.swift; sourceTree = "<group>"; };
 		36823BE52B29696600A26180 /* usimsa_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usimsa_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		36823BF22B296C4000A26180 /* MyWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		36823BF82B296CCE00A26180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36823BFA2B296CE100A26180 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		36823C012B296F7F00A26180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../esim-hybrid-app_22-06-19/usimsa/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		36823C032B29700700A26180 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
+		36823C432B2993CA00A26180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 		36823BBC2B29696500A26180 = {
 			isa = PBXGroup;
 			children = (
-				36823BC72B29696500A26180 /* usimsa-ios */,
-				36823BD82B29696600A26180 /* usimsa-iosTests */,
-				36823BE22B29696600A26180 /* usimsa-iosUITests */,
+				36823BC72B29696500A26180 /* usimsa */,
+				36823BD82B29696600A26180 /* usimsa-Tests */,
+				36823BE22B29696600A26180 /* usimsa-UITests */,
 				36823BC62B29696500A26180 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,14 +90,14 @@
 		36823BC62B29696500A26180 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36823BC52B29696500A26180 /* usimsa-ios.app */,
-				36823BD52B29696600A26180 /* usimsa-iosTests.xctest */,
-				36823BDF2B29696600A26180 /* usimsa-iosUITests.xctest */,
+				36823BC52B29696500A26180 /* usimsa.app */,
+				36823BD52B29696600A26180 /* usimsaTests.xctest */,
+				36823BDF2B29696600A26180 /* usimsaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		36823BC72B29696500A26180 /* usimsa-ios */ = {
+		36823BC72B29696500A26180 /* usimsa */ = {
 			isa = PBXGroup;
 			children = (
 				36823C032B29700700A26180 /* Preview Content */,
@@ -105,35 +105,35 @@
 				36823BF22B296C4000A26180 /* MyWebView.swift */,
 				36823BC82B29696500A26180 /* usimsa_iosApp.swift */,
 				36823BCA2B29696500A26180 /* ContentView.swift */,
-				36823C002B296F7F00A26180 /* Main.storyboard */,
+				36823C432B2993CA00A26180 /* AppDelegate.swift */,
 				36823BFA2B296CE100A26180 /* Launch Screen.storyboard */,
 			);
-			path = "usimsa-ios";
+			path = usimsa;
 			sourceTree = "<group>";
 		};
-		36823BD82B29696600A26180 /* usimsa-iosTests */ = {
+		36823BD82B29696600A26180 /* usimsa-Tests */ = {
 			isa = PBXGroup;
 			children = (
 				36823BD92B29696600A26180 /* usimsa_iosTests.swift */,
 			);
-			path = "usimsa-iosTests";
+			path = "usimsa-Tests";
 			sourceTree = "<group>";
 		};
-		36823BE22B29696600A26180 /* usimsa-iosUITests */ = {
+		36823BE22B29696600A26180 /* usimsa-UITests */ = {
 			isa = PBXGroup;
 			children = (
 				36823BE32B29696600A26180 /* usimsa_iosUITests.swift */,
 				36823BE52B29696600A26180 /* usimsa_iosUITestsLaunchTests.swift */,
 			);
-			path = "usimsa-iosUITests";
+			path = "usimsa-UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36823BC42B29696500A26180 /* usimsa-ios */ = {
+		36823BC42B29696500A26180 /* usimsa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36823BE92B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-ios" */;
+			buildConfigurationList = 36823BE92B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa" */;
 			buildPhases = (
 				36823BC12B29696500A26180 /* Sources */,
 				36823BC22B29696500A26180 /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = "usimsa-ios";
+			name = usimsa;
 			productName = "usimsa-ios";
-			productReference = 36823BC52B29696500A26180 /* usimsa-ios.app */;
+			productReference = 36823BC52B29696500A26180 /* usimsa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36823BD42B29696600A26180 /* usimsa-iosTests */ = {
+		36823BD42B29696600A26180 /* usimsaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36823BEC2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-iosTests" */;
+			buildConfigurationList = 36823BEC2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsaTests" */;
 			buildPhases = (
 				36823BD12B29696600A26180 /* Sources */,
 				36823BD22B29696600A26180 /* Frameworks */,
@@ -161,14 +161,14 @@
 			dependencies = (
 				36823BD72B29696600A26180 /* PBXTargetDependency */,
 			);
-			name = "usimsa-iosTests";
+			name = usimsaTests;
 			productName = "usimsa-iosTests";
-			productReference = 36823BD52B29696600A26180 /* usimsa-iosTests.xctest */;
+			productReference = 36823BD52B29696600A26180 /* usimsaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		36823BDE2B29696600A26180 /* usimsa-iosUITests */ = {
+		36823BDE2B29696600A26180 /* usimsaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36823BEF2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-iosUITests" */;
+			buildConfigurationList = 36823BEF2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsaUITests" */;
 			buildPhases = (
 				36823BDB2B29696600A26180 /* Sources */,
 				36823BDC2B29696600A26180 /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				36823BE12B29696600A26180 /* PBXTargetDependency */,
 			);
-			name = "usimsa-iosUITests";
+			name = usimsaUITests;
 			productName = "usimsa-iosUITests";
-			productReference = 36823BDF2B29696600A26180 /* usimsa-iosUITests.xctest */;
+			productReference = 36823BDF2B29696600A26180 /* usimsaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36823BC02B29696500A26180 /* Build configuration list for PBXProject "usimsa-ios" */;
+			buildConfigurationList = 36823BC02B29696500A26180 /* Build configuration list for PBXProject "usimsa" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36823BC42B29696500A26180 /* usimsa-ios */,
-				36823BD42B29696600A26180 /* usimsa-iosTests */,
-				36823BDE2B29696600A26180 /* usimsa-iosUITests */,
+				36823BC42B29696500A26180 /* usimsa */,
+				36823BD42B29696600A26180 /* usimsaTests */,
+				36823BDE2B29696600A26180 /* usimsaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				36823C042B29700700A26180 /* Preview Content in Resources */,
-				36823C022B296F8000A26180 /* Main.storyboard in Resources */,
 				36823BFB2B296CE100A26180 /* Launch Screen.storyboard in Resources */,
 				36823BF92B296CCE00A26180 /* Assets.xcassets in Resources */,
 			);
@@ -260,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36823C442B2993CA00A26180 /* AppDelegate.swift in Sources */,
 				36823BCB2B29696500A26180 /* ContentView.swift in Sources */,
 				36823BF42B296C4000A26180 /* MyWebView.swift in Sources */,
 				36823BC92B29696500A26180 /* usimsa_iosApp.swift in Sources */,
@@ -288,32 +288,22 @@
 /* Begin PBXTargetDependency section */
 		36823BD72B29696600A26180 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36823BC42B29696500A26180 /* usimsa-ios */;
+			target = 36823BC42B29696500A26180 /* usimsa */;
 			targetProxy = 36823BD62B29696600A26180 /* PBXContainerItemProxy */;
 		};
 		36823BE12B29696600A26180 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36823BC42B29696500A26180 /* usimsa-ios */;
+			target = 36823BC42B29696500A26180 /* usimsa */;
 			targetProxy = 36823BE02B29696600A26180 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		36823C002B296F7F00A26180 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36823C012B296F7F00A26180 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		36823BE72B29696600A26180 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -362,6 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -377,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -419,6 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -432,26 +425,32 @@
 		36823BEA2B29696600A26180 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_ASSET_PATHS = "\"usimsa-ios/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1.1.2;
+				DEVELOPMENT_ASSET_PATHS = "\"usimsa/Preview Content\"";
 				DEVELOPMENT_TEAM = VY5UU9B9MW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "유심사 - 글로벌 eSIM 서비스";
+				INFOPLIST_KEY_CFBundleDisplayName = "유심사";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gadget.usimsa;
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gadgetkorea.usima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,26 +460,31 @@
 		36823BEB2B29696600A26180 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_ASSET_PATHS = "\"usimsa-ios/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1.1.2;
+				DEVELOPMENT_ASSET_PATHS = "\"usimsa/Preview Content\"";
 				DEVELOPMENT_TEAM = VY5UU9B9MW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "유심사 - 글로벌 eSIM 서비스";
+				INFOPLIST_KEY_CFBundleDisplayName = "유심사";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gadget.usimsa;
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gadgetkorea.usima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,7 +507,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usimsa-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/usimsa-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usimsa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/usimsa";
 			};
 			name = Debug;
 		};
@@ -523,7 +527,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usimsa-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/usimsa-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usimsa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/usimsa";
 			};
 			name = Release;
 		};
@@ -566,7 +570,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36823BC02B29696500A26180 /* Build configuration list for PBXProject "usimsa-ios" */ = {
+		36823BC02B29696500A26180 /* Build configuration list for PBXProject "usimsa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36823BE72B29696600A26180 /* Debug */,
@@ -575,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36823BE92B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-ios" */ = {
+		36823BE92B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36823BEA2B29696600A26180 /* Debug */,
@@ -584,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36823BEC2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-iosTests" */ = {
+		36823BEC2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36823BED2B29696600A26180 /* Debug */,
@@ -593,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36823BEF2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsa-iosUITests" */ = {
+		36823BEF2B29696600A26180 /* Build configuration list for PBXNativeTarget "usimsaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36823BF02B29696600A26180 /* Debug */,
