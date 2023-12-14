@@ -2,11 +2,11 @@
 //  usimsa_iosTests.swift
 //  usimsa-iosTests
 //
-//  Created by 이연주 on 12/13/23.
+//  Created by 연주 on 2023/12/13.
 //
 
 import XCTest
-@testable import usimsa_ios
+@testable import usimsa
 
 final class usimsa_iosTests: XCTestCase {
 

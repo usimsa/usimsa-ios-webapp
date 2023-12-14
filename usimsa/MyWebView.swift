@@ -2,7 +2,7 @@
 //  myWebView.swift
 //  webView
 //
-//  Created by 연주 on 2023/02/03.
+//  Created by 연주 on 2023/12/13.
 //
 
 import SwiftUI
@@ -18,22 +18,30 @@ struct MyWebView: UIViewRepresentable {
     func makeUIView(context: Context) -> some WKWebView {
         
         // unwrapping
-        guard let url = URL(string: self.urlToLoad) else {
-            return WKWebView()
-        }
+//        guard let url = URL(string: self.urlToLoad) else {
+//            return WKWebView()
+//        }
         
         // webview instance 생성
         let webview = WKWebView()
+        
+        // userAgent 설정: userAgent 값을 가져온 후 커스텀 값을 추가
+        webview.evaluateJavaScript("navigator.userAgent") { (result, error) in
+            if let userAgent = result as? String {
+                let customUserAgent = userAgent + " APP_USIMSA"
+                
+                // 실제 사용하는 webView에 설정
+                webview.customUserAgent = customUserAgent
+
+                // 이제 URL 로드
+                if let url = URL(string: self.urlToLoad) {
+                    webview.load(URLRequest(url: url))
+                }
+            }
+        }
+        
         webview.uiDelegate = context.coordinator // UI 대리자 설정
         webview.navigationDelegate = context.coordinator // 내비게이션 대리자 설정
-        
-        // 웹뷰 로드
-        webview.load(URLRequest(url: url))
-        
-        // userAgent 설정
-        let userAgent = WKWebView().value(forKey: "userAgent")
-        webview.customUserAgent = userAgent as! String + "APP_USIMSA"
-        
         // 스와이프 제스쳐
         webview.allowsBackForwardNavigationGestures = true
         
