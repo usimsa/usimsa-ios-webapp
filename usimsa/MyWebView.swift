@@ -62,6 +62,15 @@ struct MyWebView: UIViewRepresentable {
             init(_ parent: MyWebView) {
                 self.parent = parent
             }
+            
+            func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+                if let url = navigationAction.request.url, url.scheme == "mailto" {
+                    UIApplication.shared.open(url)
+                    decisionHandler(.cancel) // WebView에서 기본 동작을 중지합니다.
+                } else {
+                    decisionHandler(.allow) // 기본 웹 뷰 탐색을 계속합니다.
+                }
+            }
 
             // 새 창 열기 처리
             func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
