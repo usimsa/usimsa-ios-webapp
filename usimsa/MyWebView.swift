@@ -81,15 +81,6 @@ struct MyWebView: UIViewRepresentable {
                 return nil
             }
             // 필요에 따라 추가 WKUIDelegate 및 WKNavigationDelegate 메소드 구현
-            
-            func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-                   // 앱 버전 가져오기
-                   if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-                       // JavaScript 변수로 앱 버전 설정
-                       let jsCode = "const usimsaAppVersion = '\(appVersion)';"
-                       webView.evaluateJavaScript(jsCode, completionHandler: nil)
-                   }
-               }
         }
   
     
