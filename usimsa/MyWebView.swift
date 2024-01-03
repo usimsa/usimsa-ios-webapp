@@ -13,17 +13,15 @@ import WebKit
 struct MyWebView: UIViewRepresentable {
 
     var urlToLoad: String
+    @Binding var showAlert: Bool
+    @Binding var alertMessage: String
     
     // ui view 만들기
     func makeUIView(context: Context) -> some WKWebView {
         
-        // unwrapping
-//        guard let url = URL(string: self.urlToLoad) else {
-//            return WKWebView()
-//        }
-        
         // webview instance 생성
         let webview = WKWebView()
+        webview.translatesAutoresizingMaskIntoConstraints = false
         
         // userAgent 설정: userAgent 값을 가져온 후 커스텀 값을 추가
         webview.evaluateJavaScript("navigator.userAgent") { (result, error) in
@@ -53,22 +51,62 @@ struct MyWebView: UIViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-            Coordinator(self)
+            Coordinator(self, showAlert: $showAlert, alertMessage: $alertMessage)
         }
 
         class Coordinator: NSObject, WKUIDelegate, WKNavigationDelegate {
             var parent: MyWebView
+            var allowedURLSchemes: [String] = []
+            var showAlert: Binding<Bool>
+            var alertMessage: Binding<String>
 
-            init(_ parent: MyWebView) {
+            init(_ parent: MyWebView, showAlert: Binding<Bool>, alertMessage: Binding<String>) {
                 self.parent = parent
+                self.showAlert = showAlert
+                self.alertMessage = alertMessage
+                super.init()
+                loadAllowedURLSchemes()
             }
             
+            private func loadAllowedURLSchemes() {
+                if let schemes = Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") as? [String] {
+                    allowedURLSchemes = schemes
+                }
+            }
+
+            
             func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-                if let url = navigationAction.request.url, url.scheme == "mailto" {
+                guard let url = navigationAction.request.url, let scheme = url.scheme else {
+                    decisionHandler(.allow)
+                    return
+                }
+
+                // 'mailto' 스킴 처리
+                if url.scheme == "mailto" {
                     UIApplication.shared.open(url)
-                    decisionHandler(.cancel) // WebView에서 기본 동작을 중지합니다.
+                    decisionHandler(.cancel)
+                    return
+                }
+
+                // 다른 앱을 여는 커스텀 URL 스킴 처리 (예: 'appusimsa://')
+                if allowedURLSchemes.contains(scheme) {
+                    handleCustomScheme(url)
+                    decisionHandler(.cancel)
+                    return
+                }
+
+                // 기본적인 웹 뷰 탐색 계속
+                decisionHandler(.allow)
+            }
+            
+            private func handleCustomScheme(_ url: URL) {
+                // 커스텀 URL 스킴 처리
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
                 } else {
-                    decisionHandler(.allow) // 기본 웹 뷰 탐색을 계속합니다.
+                        // 유효하지 않은 URL 처리
+                    alertMessage.wrappedValue = "선택하신 카드의 결제앱이 설치되어있지 않습니다."
+                    showAlert.wrappedValue = true
                 }
             }
 
@@ -87,10 +125,12 @@ struct MyWebView: UIViewRepresentable {
 }
 
 struct MyWebView_Previews: PreviewProvider {
+    @State static var showAlert = false
+    @State static var alertMessage = ""
+
     static var previews: some View {
-        MyWebView(urlToLoad: "https://www.usimsa.com")
+        MyWebView(urlToLoad: "https://www.usimsa.com", showAlert: $showAlert, alertMessage: $alertMessage)
             .edgesIgnoringSafeArea(.bottom)
             .scrollIndicators(.never, axes: [.vertical, .horizontal])
     }
 }
-

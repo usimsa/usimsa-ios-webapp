@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+
     var body: some View {
-        MyWebView(urlToLoad: "https://www.usimsa.com")
-            .scrollIndicators(/*@START_MENU_TOKEN@*/.never/*@END_MENU_TOKEN@*/, axes: /*@START_MENU_TOKEN@*/[.vertical, .horizontal]/*@END_MENU_TOKEN@*/)
+        MyWebView(urlToLoad: "https://www.usimsa.com", showAlert: $showAlert, alertMessage: $alertMessage)
+            .scrollIndicators(.never, axes: [.vertical, .horizontal])
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("결제실패"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
     }
 }
 
