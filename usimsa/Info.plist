@@ -13,13 +13,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
-	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kftc-bankpay</string>
@@ -62,6 +55,19 @@
 		<string>newsmartpib</string>
 		<string>ukbanksmartbanknonloginpay</string>
 		<string>apple.com</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
 	</array>
 </dict>
 </plist>
