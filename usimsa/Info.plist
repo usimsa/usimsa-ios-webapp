@@ -13,6 +13,15 @@
 			</array>
 		</dict>
 	</array>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>processing</string>
+    </array>
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+        <string>com.gadgetkorea.app.refresh</string>
+        <string>com.gadgetkorea.app.update</string>
+    </array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kftc-bankpay</string>
