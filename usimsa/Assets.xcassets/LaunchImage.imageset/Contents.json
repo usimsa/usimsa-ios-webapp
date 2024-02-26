@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "intro_new_year-320x480.jpg",
+      "filename" : "인트로(화이트)(멘트적용)-320x480.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "intro_new_year-750x1334.jpg",
+      "filename" : "인트로(화이트)(멘트적용)-750x1334.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "intro_new_year-1242x2208.jpg",
+      "filename" : "인트로(화이트)(멘트적용)-1242x2208.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
